@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.udacity.sandwichclub.DetailActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/app_bar_layout"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:fitsSystemWindows="true">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            android:id="@+id/collapsing"
+            android:fitsSystemWindows="true"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:contentScrim="#0d0d0e"
+            app:expandedTitleTextAppearance="@android:color/transparent"
+            >
+
+            <ImageView
+                android:id="@+id/image_iv"
+                android:layout_width="match_parent"
+                android:layout_height="350dp"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/sandwich_picture_content_description"
+                android:scaleType="centerCrop" />
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:id="@+id/nestedScrollView"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/also_known_as_label"
+                    android:lineSpacingMultiplier="1.5"
+                    android:padding="12dp"
+                    android:text="@string/detail_also_known_as_label"
+                    android:textStyle="bold"
+                    android:background="@color/colorAccent"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp"/>
+
+            <TextView
+                android:id="@+id/also_known_tv"
+                style="@style/DataStyle"
+                android:background="#dcdada"
+                android:textColor="#000000"
+
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/ingredients_label"
+                android:layout_marginTop="5dp"
+                android:lineSpacingMultiplier="1.5"
+                android:padding="12dp"
+                android:text="@string/detail_ingredients_label"
+                android:textStyle="bold"
+                android:background="@color/colorAccent"
+                android:textColor="@android:color/black"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:id="@+id/ingredients_tv"
+                style="@style/IngredientsStyle"
+                android:background="#dcdada"
+                android:textColor="#000000"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/origin_label"
+                android:layout_marginTop="5dp"
+                android:lineSpacingMultiplier="1.5"
+                android:padding="12dp"
+                android:text="@string/detail_place_of_origin_label"
+                android:textStyle="bold"
+                android:background="@color/colorAccent"
+                android:textColor="@android:color/black"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:id="@+id/origin_tv"
+                style="@style/DataStyle"
+                android:background="#dcdada"
+                android:textColor="#000000"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/description_label"
+                android:layout_marginTop="5dp"
+                android:lineSpacingMultiplier="1.5"
+                android:padding="12dp"
+                android:text="@string/detail_description_label"
+                android:textStyle="bold"
+                android:background="@color/colorAccent"
+                android:textColor="@android:color/black"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:id="@+id/description_tv"
+                style="@style/DescriptionStyle"
+                android:background="#dcdada"
+                android:textColor="#000000"/>
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</android.support.design.widget.CoordinatorLayout>
